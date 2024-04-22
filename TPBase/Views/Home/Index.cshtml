@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+ <!-- carrousel -->
+
+    
+    <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="/Imagenes/rauw-alejandro.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="/Imagenes/bad bunny.webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="/Imagenes/wknd.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+     <!-- cerrar carrousel -->
+  <a class="CS" href='@Url.Action("Index","Home")'>Cerrar Sesion</a>
+
+    <div class="row">
+        @{
+            @foreach (Concierto item in @ViewBag.listaConciertos)
+            {
+                <div class="col-md-3">
+                <div class="card bg-dark text-white w-100 mb-5" alt="30">
+            
+                    <div class="card bg-dark text-white w-100">
+                        <img src="@item.Imagen" class="card-img-top" alt="30">
+                        <div class="card-body">
+                            <h5 class="card-title" style="min-height:75px;">@item.Nombre</h5>
+                                                         <p class="card-text">
+                            <h6 class="likes">@item.CantLikes</h6>
+                            <img id="BotonLike" class="corazon" src="../Imagenes/CorazonBlanco.jpg"  onclick="Likes(@item.IdConcierto, this)" style="width:100px;">
+                            </p>                            <button type="button" onclick="ShowModal(@(item.IdConcierto))" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#Modalconcierto"
+                            onclick="MostrarMasInfo(@item.IdConcierto)">Comprar</button>
+
+                         </div>
+                    </div>
+                <p>@item.Descripcion</p>
+                 <p>$ @item.Precio</p>
+                </div>
+                </div>
+            }
+            
+        }
+
+    </div>
+    <!-- Modal -->
+
+    <div class="modal fade" id="Modalconcierto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" style="margin-top: 15%;" role="document">
+            <div class="modal-content bg-white text-dark">
+                <div class="modal-body">
+                    <p id="FechaCreacion"></p>
+                    <p id="Descripcion"></p>
+                    <p id="Precio"></p>
+                </div>
+                <div class="modal-footer">
+                <P>Estas seguro?</p>
+                    <button class="noselect buttonCerrar" data-bs-dismiss="modal">
+                        <span class="text">Cancelar</span>
+                        <span class="icon">
+                            
+                        </span>
+                    </button>
+                    <a id="comprarButton">
+                        <button class="noselect buttonComprar" data-bs-dismiss="modal">
+                            <span class="text">Comprar</span>
+                            <span class="icon">
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+ <script>
+function ShowModal(idConcierto)
+{
+    $('#Modalconcierto').show();
+    console.log(idConcierto);
+    document.getElementById("comprarButton").href = `/Home/ComprarConcierto?idConcierto=${idConcierto}`;
+}
+</script>

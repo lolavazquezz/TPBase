@@ -1,0 +1,292 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.container{
+  margin-top: 250px;
+}
+
+.form-group {
+  margin-bottom: 15px; 
+}
+
+.btn-success {
+  width: 40%;
+  padding: 10px;
+  background-color: #218838; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Cambia el color del texto del botón a blanco */
+}
+
+.btn-success:hover {
+  background-color: #196229; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+body {
+  background: rgb(164, 18, 232);
+  background: linear-gradient(90deg, rgb(164, 18, 232) 0%, rgb(164, 18, 232) 30%, rgb(164, 18, 232) 72%, rgb(164, 18, 232) 100%);
+}
+.NuevoJuego {
+  position: absolute;
+  top: 39%;
+  left: 44.5%;
+  width: 10%;
+}
+.iniciosesion{
+  background-color: rgb(139, 17, 196);
+}
+.card-body img{
+  width: 10px;
+  height: 20px;
+}
+.formLogin h1 {
+  color: #333; 
+}
+#carouselExampleIndicators {
+  margin: auto;
+  width: 50%; 
+}
+
+nav .container-fluid a, nav .container-fluid img{
+  margin-right: 1%;
+}
+nav .container-fluid{
+  margin-right: 10%;
+}
+nav{
+  background-color:black;
+  height: 60px;
+}
+nav .container-fluid{
+  display: flex;
+  align-items: center;
+}
+nav .container-fluid a{
+  text-decoration: none;
+  color: white;
+}
+nav .container-fluid img{
+  margin-top: 0.6%;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+.formLogin input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.container{
+  height: 300px;
+}
+.imag1{
+  margin-left: 55px;
+}
+
+.formLogin button {
+  width: 40%;
+  padding: 10px;
+  background-color: rgb(165, 30, 228); /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Agregamos transiciones para suavizar los cambios */
+}
+
+
+
+.formLogin button:hover {
+  background-color: rgb(115, 10, 163); 
+  transform: scale(1.1); 
+}
+
+.masInfo{
+  margin-top: 5%;
+}
+.buttonCerrar {
+  margin-right: 34%;
+  width: 150px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.buttonCerrar .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.buttonCerrar .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonCerrar svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.buttonCerrar:hover {
+  background: #ff3636;
+}
+
+.buttonCerrar:hover .text {
+  color: transparent;
+}
+
+.buttonCerrar:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.buttonCerrar:focus {
+  outline: none;
+}
+
+.buttonCerrar:active .icon svg {
+  transform: scale(0.8);
+}
+
+.buttonComprar {
+  width: 150px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #04ca0e;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #04ca0e;
+}
+
+.buttonComprar,
+.buttonComprar span,
+.buttonCerrar,
+.buttonCerrar span {
+  transition: 400ms;
+}
+
+.buttonComprar .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.buttonComprar .icon {
+  position: absolute;
+  border-left: 1px solid #09a711;
+  transform: translateX(110px);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonComprar svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.buttonComprar:hover {
+  background: #09a711;
+}
+
+.buttonComprar:hover .text {
+  color: transparent ;
+}
+
+.buttonComprar:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.buttonComprar:focus {
+  outline: none;
+}
+
+.buttonComprar:active .icon svg {
+  transform: scale(0.8);
+}
+
+.formLogin {
+  margin-left: 30%;
+  width: 40%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 24%, rgb(164, 18, 232) 100%);
+  background: rgb(242,242,242);
+  background: linear-gradient(90deg, rgba(242,242,242,1) 0%, rgba(208,208,233,1) 35%, rgba(185,229,238,1) 100%);
+  text-align: center;
+}
+
+.CS{
+  position: absolute;
+  bottom: 96%;
+  right: 8%;
+  color: #eee;
+}
+.card col-md-3
+{
+  display: grid !important ;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important ;
+  margin-top: 2px !important ;
+  gap: 10px !important ;
+}
+.card col-md-3 img
+{
+height: 300px;
+width: 300px;
+}
+
+.likes {
+  font-size: medium;
+  margin-bottom: -11%;
+  margin-left: 12%;
+}
+
+.corazon {
+  width: 10% !important;
+  height: 12% !important;
+  margin-right: 5%;
+}
+
+.masInfo{
+  margin-top: 5%;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+    <form class="formLogin" method="get" action='@Url.Action("VerificarUsuario","Home")' enctype="multipart/form-data">
+        <h1 class="text-white">Iniciar Sesión</h1>
+        <input class="mb-3" type="text" name="Nombre" placeholder="Ingrese su usuario" required>
+        <br>
+        <input class="mb-3" type="password" name="Contraseña" placeholder="Ingrese su contraseña" required>
+        <br>
+        <button class="mb-3 btn btn-primary" type="submit">
+            Ingresar
+        </button>
+        <br>
+
+        <a style="color: rgb(0, 0, 0);" href='@Url.Action("Registrarse","Home")'>No tienes una cuenta, Registrese.</a>
+        <br>
+        <br>
+        <a style="color: rgb(0, 0, 0);" href='@Url.Action("BuscarOlvidoContraseña","Home")'>Olvide mi contraseña</a>
+
+    </form>
+    @if (ViewBag.Mensaje != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Mensaje
+        </div>
+    }
+</div>

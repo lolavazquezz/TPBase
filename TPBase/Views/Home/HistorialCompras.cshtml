@@ -1,0 +1,21 @@
+@model List<HistorialCompras>
+
+<h2>Historial de Compras</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Concierto</th>
+            <th>Fecha de Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var compra in Model)
+        {
+            <tr>
+                <td>@compra.nombreConcierto</td>
+                <td>@compra.FechaCompra.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
