@@ -41,12 +41,6 @@ body {
   background: rgb(164, 18, 232);
   background: linear-gradient(90deg, rgb(164, 18, 232) 0%, rgb(164, 18, 232) 30%, rgb(164, 18, 232) 72%, rgb(164, 18, 232) 100%);
 }
-.NuevoJuego {
-  position: absolute;
-  top: 39%;
-  left: 44.5%;
-  width: 10%;
-}
 .iniciosesion{
   background-color: rgb(139, 17, 196);
 }
@@ -87,6 +81,9 @@ nav .container-fluid img{
   position: absolute;
   bottom: 0;
   margin-bottom: 30px;
+}
+.carousel-inner{
+  margin-bottom: 35px;
 }
 .formLogin input {
   width: 50%;
@@ -164,10 +161,6 @@ nav .container-fluid img{
   background: #ff3636;
 }
 
-.buttonCerrar:hover .text {
-  color: transparent;
-}
-
 .buttonCerrar:hover .icon {
   width: 150px;
   border-left: none;
@@ -228,10 +221,6 @@ nav .container-fluid img{
   background: #09a711;
 }
 
-.buttonComprar:hover .text {
-  color: transparent ;
-}
-
 .buttonComprar:hover .icon {
   width: 150px;
   border-left: none;
@@ -256,19 +245,23 @@ nav .container-fluid img{
   text-align: center;
 }
 
-.CS{
-  position: absolute;
-  bottom: 96%;
-  right: 8%;
-  color: #eee;
-}
+
 .card col-md-3
 {
+
   display: grid !important ;
   grid-template-columns: 1fr 1fr 1fr 1fr !important ;
-  margin-top: 2px !important ;
+  margin-top: 5px !important ;
   gap: 10px !important ;
-}
+    max-width: 300px; /* Establecer el ancho máximo de las cards */
+
+  }
+  .card-img-top {
+    height: 200px; /* Establecer una altura fija para las imágenes */
+    object-fit: cover; /* Hacer que las imágenes se ajusten al tamaño especificado */
+  }
+  
+
 .card col-md-3 img
 {
 height: 300px;
@@ -290,3 +283,5 @@ width: 300px;
 .masInfo{
   margin-top: 5%;
 }
+
+
